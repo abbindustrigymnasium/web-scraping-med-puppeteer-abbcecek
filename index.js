@@ -25,17 +25,21 @@ async function getTemps () {
     const dailyItems = await page.$$('.daily-weather-list-item')
     const obj = {} // Declare obj outside of the loop
 
+    // For loop that loops through each day
     for (const dailyItem of dailyItems) {
         await dailyItem.click()
         await page.waitForSelector('.modal-dialog__dialog')
 
+        // Loop that loops through each element in the pop-up
         const temps = await page.evaluate(() => {
             const date = document.querySelector("#page-modal > div > div.modal-dialog__scroll-container > div > o-4-0-4 > div > div.modal-dialog__header > div > h2 > time").getAttribute("datetime")
             const tempList = document.querySelectorAll(".fluid-table__row")
 
+            // Creates objects to store scraped data
             const hourly = {}
             const obj = {}
 
+            // Finds the hour, temperature and weather of each hour and saves the data in the objects
             Array.from(tempList).map((times) => {
                 const hour = parseInt(times.querySelector(".fluid-table__cell--align-left > span > span > span > time").innerHTML)
                 const temperature = times.querySelector(".fluid-table__cell.fluid-table__cell--align-right > .fluid-table__cell-content > span > span").innerText
@@ -46,7 +50,7 @@ async function getTemps () {
                 }
             })
 
-
+            // Updates the objects that will be saved in the json file
             obj[date] = hourly
 
             return obj
@@ -60,7 +64,7 @@ async function getTemps () {
     // Display the times and temperatures
     console.log(obj)
 
-
+    // Saves the data object in data.json
     const jsonString = JSON.stringify(obj)
     fs.writeFile('data.json', jsonString, (err) => {
         if (err) {
@@ -76,5 +80,5 @@ async function getTemps () {
 
 }
 
-// Start the scraping
+// Run the function and start scraping
 getTemps()
