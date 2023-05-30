@@ -32,10 +32,17 @@ För att köra programmet skriver du:
 node index.js
 ```
 ### Steg 4
-Gå till mappen `weather-scraper-vue` och starta en lokal webbserver.
+Gå till mappen `weather-scraper-vue`:
 ```
 cd weather-scraper-vue
-
+```
+Installera paket igen:
+```
+npm install
+```
+### Steg 5
+Starta en lokal webbserver:
+```
 npm run serve
 ```
 
@@ -46,6 +53,8 @@ Om index.js körs då lokala webbservern är uppe kommer dess värden att uppdat
 - Installationsskript
 - Uppdateringsknapp
 - Grafer för visualisering
+- Få tidsspann att skrapas korrekt (timmarna "`02-08`" blir bara "`02`")
+
 
 ## License
 Detta projekt är licensierat under MIT-licens.
