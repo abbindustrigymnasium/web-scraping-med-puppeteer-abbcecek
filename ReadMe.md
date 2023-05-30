@@ -8,7 +8,7 @@ Detta projekt är ett webskrapnings-projekt där jag har skrapat väderwebsidan 
 
 
 ## Vad gör koden?
-Puppeteer gör någonting som kallas "headless browsing", vilket betyder att det inte är en människa bakom 'webbsurfandet'. Koden skrapar sidan på information och sparar ner allt i en JSON-fil. Jag kan alltså sen komma åt den datafilen i min webbsidas kod och presentera den på ett finare sätt än en .json fil.  
+Puppeteer gör någonting som kallas "[headless browsing](https://oxylabs.io/blog/what-is-headless-browser)", vilket betyder att det inte är en människa bakom 'webbsurfandet'. Koden skrapar sidan på information och sparar ner allt i en JSON-fil. Jag kan alltså sen komma åt den datafilen i min webbsidas kod och presentera den på ett finare sätt än en .json fil.  
 
 ## Setup
 Följande steg utförs i kommandoprompt
@@ -45,7 +45,8 @@ Starta en lokal webbserver:
 ```
 npm run serve
 ```
-
+Webbsidan körs då på http://localhost:8080/  
+ 
 Om index.js körs då lokala webbservern är uppe kommer dess värden att uppdatera automatiskt.
 
 ## Roadmap
