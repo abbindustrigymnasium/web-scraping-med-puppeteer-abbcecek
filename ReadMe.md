@@ -21,6 +21,10 @@ Installera paketen genom att köra
 ``` 
 npm install
 ```
+Vid eventuellt fel kan en clean install behövas. Detta skrivs på följande sätt:
+```
+npm clean-install
+```
 
 ### Steg 3
 För att köra programmet skriver du:
