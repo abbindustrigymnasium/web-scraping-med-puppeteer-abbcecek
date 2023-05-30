@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex justify-start flex-row flex-wrap text-lg grid grid-cols-3 gap-x-4 px-2"
+    class="flex justify-start flex-row flex-wrap text-lg grid grid-cols-3 gap-x-4 px-8"
   >
     <!-- Creates a div for every date key in object -->
     <div

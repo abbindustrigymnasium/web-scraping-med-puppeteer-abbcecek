@@ -2,10 +2,13 @@
 
 Detta projekt är ett webskrapnings-projekt där jag har skrapat väderwebsidan [yr.no](https://www.yr.no/en). Jag har använt node-biblioteket ['puppeteer'](https://pptr.dev/) för att skrapa sidan och [vue](https://vuejs.org/) samt [tailwindcss](https://tailwindcss.com/) för en finare presentation i form av en webbsida. 
 
+<div style="text-align: center;">
+  <img src="väder_skrap.png" alt="Bild av webbsidan" height="400">
+</div>
+
 ## Systemkrav
 - node v18
 - npm v9
-
 
 ## Vad gör koden?
 Puppeteer gör någonting som kallas "[headless browsing](https://oxylabs.io/blog/what-is-headless-browser)", vilket betyder att det inte är en människa bakom 'webbsurfandet'. Koden skrapar sidan på information och sparar ner allt i en JSON-fil. Jag kan alltså sen komma åt den datafilen i min webbsidas kod och presentera den på ett finare sätt än en .json fil.  
@@ -55,7 +58,9 @@ Om index.js körs då lokala webbservern är uppe kommer dess värden att uppdat
 - Uppdateringsknapp
 - Grafer för visualisering
 - Få tidsspann att skrapas korrekt (timmarna "`02-08`" blir bara "`02`")
-
+- Sammanfattning av dagar man kan klicka på för att expandera
+- Fler mätvärden (vind, nederbörd, luftfuktighet osv.)
+- Mer bearbetad UI/UX, även göra den responsiv
 
 ## License
 Detta projekt är licensierat under MIT-licens.
